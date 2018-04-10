@@ -6,16 +6,18 @@ if number < 0:
     calc = number * -1
     lastdigit = calc % 10
     if lastdigit > 5:
-        print('Last digit of %d is -%d and is greater than 5' % (number, lastdigit))
+        print('Last digit of %d is -%d and is greater than 5'
+              % (number, lastdigit))
     elif lastdigit == 0:
         print('Last digit of %d is %d and is 0' % (number, lastdigit))
     elif lastdigit < 6:
         print('Last digit of %d is -%d and is less than 6 and not 0'
-          % (number, lastdigit))
+              % (number, lastdigit))
 else:
     lastdigit = number % 10
     if lastdigit > 5:
-        print('Last digit of %d is %d and is greater than 5' % (number, lastdigit))
+        print('Last digit of %d is %d and is greater than 5'
+              % (number, lastdigit))
     elif lastdigit == 0:
         print('Last digit of %d is %d and is 0' % (number, lastdigit))
     elif lastdigit < 6:
