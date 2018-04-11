@@ -39,6 +39,7 @@ listint_t *insert_node(listint_t **head, int number)
 	if (cursor == *head)
 	{
 		node->next = *head;
+		*head = node;
 		return(node);
 	}
 	else
