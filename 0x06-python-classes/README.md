@@ -7,8 +7,8 @@ The purpose of this project is to introduce classes and objects in Python
 an empty class Square that defines a square
 
 ### 1-square.py
-a class Square that defines a square by:
-Private instance attribute: size
+a class Square that defines a square by:  
+Private instance attribute: size  
 Instantiation with size (no type/value verification)
 
 ### 2-square.py
