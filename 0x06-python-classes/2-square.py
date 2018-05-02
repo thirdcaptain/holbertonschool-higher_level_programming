@@ -1,13 +1,9 @@
 #!/usr/bin/python3
-"""
-This module defines a square with errors
-"""
+"""This module defines a square with errors"""
 
 
 class Square:
-    """
-    This class defines a square with attribute size with exceptions
-    """
+    """This class defines a square with attribute size with exceptions"""
     def __init__(self, size=0):
         if (type(size) is not int):
             raise TypeError("size must be an integer")
