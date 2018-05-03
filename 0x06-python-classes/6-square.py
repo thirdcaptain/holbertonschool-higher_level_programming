@@ -12,6 +12,8 @@ class Square:
         self.__size = size
         if type(position) is not tuple:
             raise TypeError("position must be a tuple of 2 positive integers")
+        if len(position) is not 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
         if not isinstance(position[0], int):
             raise TypeError("position must be a tuple of 2 positive integers")
         if not isinstance(position[1], int):
@@ -44,6 +46,7 @@ class Square:
         """This method prints a square"""
         if self.__size == 0:
             print()
+            return
         for vertical in range(self.__position[1]):
             print()
         else:
