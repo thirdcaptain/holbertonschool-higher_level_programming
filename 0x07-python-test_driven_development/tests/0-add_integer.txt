@@ -12,6 +12,12 @@
 >>> add_integer(2)
 100
 
+>>> add_integer(99999999999999999999999999999999999999999999999999999999999999999999999, 99999999999999999999999999999999999999999999999999999999999999999999999)
+199999999999999999999999999999999999999999999999999999999999999999999998
+
+>>> add_integer(0.0001, 0.0001)
+0
+
 >>> add_integer()
 Traceback (most recent call last):
 TypeError: add_integer() missing 1 required positional argument: 'a'
@@ -115,3 +121,6 @@ TypeError: b must be an integer
 >>> add_integer(3, 3.14J)
 Traceback (most recent call last):
 TypeError: b must be an integer
+
+>>> add_integer(-3, --3)
+0
