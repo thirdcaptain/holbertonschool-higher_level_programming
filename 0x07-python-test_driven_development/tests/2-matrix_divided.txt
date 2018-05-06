@@ -8,37 +8,87 @@ div checks
 [[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
 
 >>> matrix_divided(matrix, 10)
+[[0.1, 0.2, 0.3], [0.4, 0.5, 0.6]]
 
 >>> matrix_divided(matrix, 5)
+[[0.2, 0.4, 0.6], [0.8, 1.0, 1.2]]
 
 >>> matrix_divided(matrix, 999999)
+[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
 
 >>> matrix_divided(matrix, -1)
+[[-1.0, -2.0, -3.0], [-4.0, -5.0, -6.0]]
 
 >>> matrix_divided(matrix, -999)
+[[-0.0, -0.0, -0.0], [-0.0, -0.01, -0.01]]
 
 >>> matrix_divided(matrix, -1.3)
+[[-0.77, -1.54, -2.31], [-3.08, -3.85, -4.62]]
 
 >>> matrix_divided(matrix, 0)
+Traceback (most recent call last):
+ZeroDivisionError: division by zero
 
 >>> matrix_divided(matrix, )
+Traceback (most recent call last):
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
 
 >>> matrix_divided(matrix, 2.2)
+[[0.45, 0.91, 1.36], [1.82, 2.27, 2.73]]
 
 >>> matrix_divided(matrix, 2.00005)
+[[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
 
 >>> matrix_divided(matrix, "cow")
+Traceback (most recent call last):
+TypeError: div must be a number
 
 >>> matrix_divided(matrix, 345L)
+Traceback (most recent call last):
+SyntaxError: invalid syntax
 
 >>> matrix_divided(matrix, 3.14J)
+Traceback (most recent call last):
+TypeError: div must be a number
 
 >>> matrix_divided(matrix, 1, 2)
+Traceback (most recent call last):
+TypeError: matrix_divided() takes 2 positional arguments but 3 were given
 
 >>> matrix_divided(matrix, [])
+Traceback (most recent call last):
+TypeError: div must be a number
 
 >>> matrix_divided(matrix, {})
+Traceback (most recent call last):
+TypeError: div must be a number
 
 >>> matrix_divided(matrix, ())
+Traceback (most recent call last):
+TypeError: div must be a number
 
 >>> matrix_divided(matrix, --1)
+[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
+
+matrix type checks
+=================================
+
+>>> matrix = [["cow", 2, 3], [4, 5, 6]]
+>>> matrix_divided(matrix, 1)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix = [[1, 2], [4, 5, 6]]
+>>> matrix_divided(matrix, 1)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix = [-1, 2, 3, 4, 5, 6]
+>>> matrix_divided(matrix, 1)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix = None
+>>> matrix_divided(matrix, 1)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
