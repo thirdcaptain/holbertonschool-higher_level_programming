@@ -13,13 +13,21 @@ def matrix_divided(matrix, div):
     if div == 0:
         raise ZeroDivisionError("division by zero")
     new_matrix = []
-    length = len(matrix)
     """validate matrix"""
+    if matrix is None:
+        raise TypeError("matrix must be a matrix"
+                        " (list of lists) of integers/floats")
     """validate matrix is made of lists"""
+    length = len(matrix)
     for i in range(length):
         if not isinstance(matrix[i], list):
             raise TypeError("matrix must be a matrix"
                             " (list of lists) of integers/floats")
+    """validate row lengths"""
+    row_length = len(matrix[0])
+    for i in range(length):
+        if len(matrix[i]) != row_length:
+            raise TypeError("Each row of the matrix must have the same size")
     """verify element types in matrix """
     for i in range(length):
         for element in matrix[i]:
