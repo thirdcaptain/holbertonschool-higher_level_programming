@@ -19,7 +19,10 @@ def text_indentation(text):
             i += 1
             if i >= (length - 1):
                 break
-        print("{}\n".format(text[i]))
+        if i == (length - 1):
+            print("{}".format(text[i]))
+        else:
+            print("{}\n".format(text[i]))
         i += 1
         if i >= (length - 1):
             break
