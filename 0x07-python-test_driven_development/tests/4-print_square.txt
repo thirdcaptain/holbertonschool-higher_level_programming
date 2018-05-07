@@ -19,7 +19,8 @@
 ##########
 
 >>> print_square(0)
-<BLANKLINE>
+
+NOT <BLANKLINE>
 
 >>> print_square(1)
 #
