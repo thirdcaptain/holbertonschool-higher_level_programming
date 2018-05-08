@@ -18,8 +18,8 @@ class Rectangle:
             width (int): width of rectangle
             height (int): height of rectangle
         """
-        self.height = height
         self.width = width
+        self.height = height
         type(self).number_of_instances += 1
 
     @property
@@ -127,8 +127,4 @@ class Rectangle:
         """
         Returns a new Rectangle instance of width == height == size
         """
-        if size < 0:
-            raise ValueError("size must be >= 0")
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
         return cls(size, size)
