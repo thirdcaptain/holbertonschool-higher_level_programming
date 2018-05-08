@@ -8,9 +8,6 @@ class Rectangle:
     """
     Rectange Class
     """
-
-    number_of_instances = 0
-
     def __init__(self, width=0, height=0):
         """__init__ method that sets width and height of rectangle
         Args:
@@ -19,7 +16,6 @@ class Rectangle:
         """
         self.height = height
         self.width = width
-        type(self).number_of_instances += 1
 
     @property
     def width(self):
@@ -103,7 +99,5 @@ class Rectangle:
     def __del__(self):
         """
         prints Bye rectangle... when instance is deleted
-        also decrements counter when instance is deleted
         """
         print("Bye rectangle...")
-        type(self).number_of_instances -= 1
