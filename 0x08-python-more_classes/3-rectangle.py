@@ -82,6 +82,8 @@ class Rectangle:
         __str__ method that returns a string rectagle using #
         """
         string = ""
+        if self.__width == 0 or self.__height == 0:
+            return string
         for row in range(self.__height):
             for column in range(self.__width):
                 string += "#"
