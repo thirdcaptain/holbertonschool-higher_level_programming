@@ -4,6 +4,7 @@ Defines a function that parses and prints text with two new lines after:
 period, question mark, and colon
 """
 
+
 def text_indentation(text):
 
     if not isinstance(text, str):
@@ -37,7 +38,8 @@ def text_indentation(text):
 #            i += 1
 #            if i >= (length - 1):
 #                break
-#        while (i < length and text[i] != '.' and text[i] != '?' and text[i] != ':'):
+#        while (i < length and text[i] != '.' and
+#               text[i] != '?' and text[i] != ':'):
 #            print("{}".format(text[i]),end="")
 #            i += 1
 #            if i >= (length - 1):
