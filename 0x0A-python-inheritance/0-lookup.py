@@ -3,6 +3,7 @@
 Module defines lookup which returns attributes of an object
 """
 
+
 def lookup(obj):
     """ returns attributes of an object
     parameters:
