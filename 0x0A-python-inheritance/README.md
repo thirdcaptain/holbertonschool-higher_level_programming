@@ -1,4 +1,4 @@
-#0x0A. Python - Inheritance
+# 0x0A. Python - Inheritance
 
 20180515 - This purpose of this assignment was to introduce Inheritance in Python
 
