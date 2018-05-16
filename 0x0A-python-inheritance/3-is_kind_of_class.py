@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-module defines is_same_class function that returns True if object is a sub/class
+module defines function that returns True if object is a sub/class
 """
 
 
