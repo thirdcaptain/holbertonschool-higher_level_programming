@@ -26,6 +26,7 @@ class BaseGeometry:
             raise ValueError("{} must be greater than 0"
                              .format(name))
 
+
 class Rectangle(BaseGeometry):
     """
     class Rectangle that is subclass of BaseGeometry
