@@ -11,6 +11,10 @@ load_from_json_file = __import__('8-load_from_json_file').load_from_json_file
 
 filename = "add_item.json"
 json_list = argv[1:]
-my_obj = load_from_json_file(filename)
-my_obj += json_list
-save_to_json_file(my_obj, filename)
+try:
+    my_obj = load_from_json_file(filename)
+    my_obj += json_list
+    save_to_json_file(my_obj, filename)
+except:
+    my_obj = json_list
+    save_to_json_file(my_obj, filename)
