@@ -9,14 +9,14 @@ class Rectangle(BaseGeometry):
     """
     class Rectangle that is subclass of BaseGeometry
     """
-#    def __init__(self, width, height):
-#        """
-#        initializes width and height, validating with integer_validator
-#        """
-#        super().integer_validator("width", width)
-#        super().integer_validator("height", height)
-#        self.__width = width
-#        self.__height = height
+    def __init__(self, width, height):
+        """
+        initializes width and height, validating with integer_validator
+        """
+        super().integer_validator("width", width)
+        super().integer_validator("height", height)
+        self.__width = width
+        self.__height = height
 
     def area(self):
         """ Returns the area of the rectangle
