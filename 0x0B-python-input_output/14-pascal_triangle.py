@@ -3,6 +3,7 @@
 module defines pascal triangle function
 """
 
+
 def pascal_triangle(n):
     """
     prints pascal's triangle up to size n
@@ -15,7 +16,7 @@ def pascal_triangle(n):
         return triangle
     for row in range(n):
         temp = []
-        for i in range (row + 1):
+        for i in range(row + 1):
             if i == 0 or i == row:
                 temp.append(1)
             else:
@@ -23,8 +24,6 @@ def pascal_triangle(n):
                          triangle[row - 1][i])
                 temp.append(value)
         triangle.append(temp)
-#        for i in range(row):
-#            triangle[i].append(i)
     return triangle
 
 
