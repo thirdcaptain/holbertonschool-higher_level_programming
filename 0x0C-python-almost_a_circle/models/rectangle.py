@@ -17,6 +17,8 @@ class Rectangle(Base):
         y (int): y
     """
     def __init__(self, width, height, x=0, y=0, id=None):
+        """Initializer method
+        """
         self.width = width
         self.height = height
         self.x = x
@@ -150,6 +152,8 @@ class Rectangle(Base):
         elif kwargs:
             for key, value in kwargs.items():
                 if key in list:
+                    setattr(self, key, value)
+                    """
                     if key == "id":
                         self.id = value
                     elif key == "width":
@@ -160,3 +164,13 @@ class Rectangle(Base):
                         self.__x = value
                     elif key == "y":
                         self.__y = value
+                    """
+
+    def to_dictionary(self):
+        """returns dictionary representation of a Rectangle
+        """
+        dictionary = self.__dict__
+        for key in dictionary:
+            new_key = key.replace("_Rectangle__", "")
+            dictionary[new_key] = dictionary.pop(key)
+        return dictionary
