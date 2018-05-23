@@ -174,5 +174,8 @@ class Rectangle(Base):
             new_key = key.replace("_Rectangle__", "")
             dictionary[new_key] = dictionary.pop(key)
         return dictionary
- #       new_dict = {'id': self.id, 'x': self.x, 'y': self.y, 'width': self.width, 'height': self.height}
- #       return new_dict
+        """
+       new_dict = {'id': self.id, 'x': self.x, 'y': self.y,
+        'width': self.width, 'height': self.height}
+       return new_dict
+        """
