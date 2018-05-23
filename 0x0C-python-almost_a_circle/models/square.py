@@ -64,6 +64,6 @@ class Square(Rectangle):
         dictionary = dict(self.__dict__)
         for key in dictionary:
             new_key = key.replace("_Rectangle__", "")
-            new_key = new_key.replace("_Square__", "")
-            dictionary[new_key] = dictionary.pop(key)
+            new_key2 = new_key.replace("_Square__", "")
+            dictionary[new_key2] = dictionary.pop(key)
         return dictionary
