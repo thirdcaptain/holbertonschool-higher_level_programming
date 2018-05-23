@@ -51,6 +51,7 @@ class Base:
             with open(filename, mode="w", encoding="utf-8") as f:
                 f.write(cls.to_json_string(list_objects))
 
+    @staticmethod
     def from_json_string(json_string):
         """returns the list of the JSON string representation
         args:
