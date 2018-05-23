@@ -61,7 +61,7 @@ class Square(Rectangle):
     def to_dictionary(self):
         """returns dictionary representation of a Square
         """
-        dictionary = self.__dict__
+        dictionary = dict(self.__dict__)
         for key in dictionary:
             new_key = key.replace("_Rectangle__", "")
             new_key = new_key.replace("_Square__", "")

@@ -106,17 +106,17 @@ class Rectangle(Base):
         Returns:
             int: The area.
         """
-        return self.__width * self.__height
+        return self.width * self.height
 
     def display(self):
         """prints the rectangle with the # character
         """
-        for row0 in range(self.__y):
+        for row0 in range(self.y):
             print()
-        for row in range(self.__height):
-            for column0 in range(self.__x):
+        for row in range(self.height):
+            for column0 in range(self.x):
                 print(" ", end="")
-            for column in range(self.__width):
+            for column in range(self.width):
                 print("#", end="")
             print()
 
@@ -124,9 +124,9 @@ class Rectangle(Base):
         """returns id x/y - width/height
         """
         return ("[Rectangle] " + "(" + str(self.id) +
-                ") " + str(self.__x) + "/" + str(self.__y) +
-                " - " + str(self.__width) + "/" +
-                str(self.__height))
+                ") " + str(self.x) + "/" + str(self.y) +
+                " - " + str(self.width) + "/" +
+                str(self.height))
 
     def update(self, *args, **kwargs):
         """ assigns an argument to each attribute
@@ -142,13 +142,13 @@ class Rectangle(Base):
                 if count == 1:
                     self.id = arg
                 elif count == 2:
-                    self.__width = arg
+                    self.width = arg
                 elif count == 3:
-                    self.__height = arg
+                    self.height = arg
                 elif count == 4:
-                    self.__x = arg
+                    self.x = arg
                 elif count == 5:
-                    self.__y = arg
+                    self.y = arg
         elif kwargs:
             for key, value in kwargs.items():
                 if key in list:
@@ -169,8 +169,10 @@ class Rectangle(Base):
     def to_dictionary(self):
         """returns dictionary representation of a Rectangle
         """
-        dictionary = self.__dict__
+        dictionary = dict(self.__dict__)
         for key in dictionary:
             new_key = key.replace("_Rectangle__", "")
             dictionary[new_key] = dictionary.pop(key)
         return dictionary
+ #       new_dict = {'id': self.id, 'x': self.x, 'y': self.y, 'width': self.width, 'height': self.height}
+ #       return new_dict

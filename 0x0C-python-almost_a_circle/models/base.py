@@ -36,6 +36,10 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """Saves JSON string representation to file
+        args:
+            list_objs (list): list of instances that inherit from Base
+        """
         list_objects = []
         filename = str(cls.__name__) + ".json"
         if not any(list_objs):
@@ -46,3 +50,47 @@ class Base:
                 list_objects.append(cls.to_dictionary(obj))
             with open(filename, mode="w", encoding="utf-8") as f:
                 f.write(cls.to_json_string(list_objects))
+
+    def from_json_string(json_string):
+        """returns the list of the JSON string representation
+        args:
+            json_string (str): list of dictionaries
+        """
+        list_json = []
+        if not any(json_string):
+            return list_json
+        else:
+            list_json = json.loads(json_string)
+            return(list_json)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """returns an instance with all attributes already set
+        args:
+            **dictionary (dict): description of attributes
+        """
+        if cls.__name__ == "Square":
+            tmp_cls = cls(1)
+        elif cls.__name__ == "Rectangle":
+            tmp_cls = cls(1, 1)
+        tmp_cls.update(**dictionary)
+        return tmp_cls
+
+    @classmethod
+    def load_from_file(cls):
+        """returns a list of instances
+        """
+        text = ""
+        json_list = []
+        instance_list = []
+        filename = str(cls.__name__) + ".json"
+        try:
+            with open(filename, mode="r", encoding="utf-8") as f:
+                for line in f:
+                    text += line
+            json_list = cls.from_json_string(text)
+            for element in json_list:
+                instance_list.append(cls.create(**element))
+            return instance_list
+        except FileNotFoundError:
+            return json_list
