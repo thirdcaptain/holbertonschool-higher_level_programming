@@ -24,6 +24,12 @@ class Base:
             self.id = type(self).__nb_objects
             """ type(self) == Base class"""
 
+    @classmethod
+    def reset(cls):
+        """resets __nb_objects
+        """
+        cls.__nb_objects = 0
+
     @staticmethod
     def to_json_string(list_dictionaries):
         """ returns JSON string
@@ -58,6 +64,8 @@ class Base:
             json_string (str): list of dictionaries
         """
         list_json = []
+        if json_string is None:
+            return list_json
         if not any(json_string):
             return list_json
         else:

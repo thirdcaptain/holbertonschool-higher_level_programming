@@ -175,7 +175,7 @@ class Rectangle(Base):
             dictionary[new_key] = dictionary.pop(key)
         return dictionary
         """
-       new_dict = {'id': self.id, 'x': self.x, 'y': self.y,
+       dictionary = {'id': self.id, 'x': self.x, 'y': self.y,
         'width': self.width, 'height': self.height}
-       return new_dict
+       return dictionary
         """
