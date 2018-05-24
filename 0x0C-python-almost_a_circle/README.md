@@ -26,3 +26,5 @@ That updates the arguments to attributes
 inherits from Rectangle
 def __init__(self, size, x=0, y=0, id=None):
 
+### main/
+contains main files for project
