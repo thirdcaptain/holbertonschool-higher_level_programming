@@ -15,23 +15,14 @@ __width - width
 __height - height
 __x - x
 __y - y
+setters and getters should have validation for type and value
+area method that returns the area
+display method that prints the rectangle, accounting for x,y shift
+updated __str__ method that returns [Rectangle] (<id>) <x>/<y> - <width>/<height>
+update method: update(self, *args, **kwargs)  
+That updates the arguments to attributes
 
-### 
+### models/square.py
+inherits from Rectangle
+def __init__(self, size, x=0, y=0, id=None):
 
-
-### 
-
-
-### 
-
-
-### 
-
-
-### 
-
-
-### 
-
-
-### 
