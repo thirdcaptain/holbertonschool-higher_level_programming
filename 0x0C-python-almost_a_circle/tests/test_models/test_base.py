@@ -2,7 +2,6 @@
 """Unittest for Base class
 """
 
-import pep8
 import unittest
 import json
 from models.base import Base
@@ -25,20 +24,6 @@ class TestBase(unittest.TestCase):
         self.assertEqual(b5.id, 5)
         self.assertEqual(bcow.id, "cow")
         self.assertEqual(b3.id, 3)
-
-    def test_2_pep8_test(self):
-        """Tests for pep8 in test_base
-        """
-        p8 = pep8.StyleGuide(quiet=True)
-        p = p8.check_files(['tests/test_models/test_base.py'])
-        self.assertEqual(p.total_errors, 0, "fix test_base.py pep8")
-
-    def test_3_pep8_models(self):
-        """Tests for pep8 in models
-        """
-        p8 = pep8.StyleGuide(quiet=True)
-        b = p8.check_files(['models/base.py'])
-        self.assertEqual(b.total_errors, 0, "fix base.py pep8")
 
     def test_4_docstring(self):
         """Tests for docstring
