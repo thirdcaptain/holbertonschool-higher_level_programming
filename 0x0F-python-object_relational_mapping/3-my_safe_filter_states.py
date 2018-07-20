@@ -15,7 +15,7 @@ if __name__ == "__main__":
     cur = db.cursor()
 
     # %s placeholder fills values more safely
-    state_lookup =str(argv[4])
+    state_lookup = str(argv[4])
     SQLcommand = """SELECT * FROM states
                     WHERE states.name=%s
                     ORDER BY states.id ASC"""
