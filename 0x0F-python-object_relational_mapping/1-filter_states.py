@@ -14,7 +14,7 @@ if __name__ == "__main__":
                          db=argv[3])
     cur = db.cursor()
 
-    #BINARY option makes query case sensitive
+    # BINARY option makes query case sensitive
     SQLcommand = """SELECT * FROM states
                     WHERE BINARY states.name LIKE 'N%'
                     ORDER BY states.id ASC"""
