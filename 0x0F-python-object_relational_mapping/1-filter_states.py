@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module lists all states from the database hbtn_0e_0_usa"""
+"""Module lists all states that start with N from the database hbtn_0e_0_usa"""
 
 
 if __name__ == "__main__":
@@ -15,7 +15,7 @@ if __name__ == "__main__":
     cur = db.cursor()
 
     SQLcommand = """SELECT * FROM states
-                    WHERE name REGEXP '^N.*'
+                    WHERE states.name LIKE 'N%'
                     ORDER BY states.id ASC"""
     cur.execute(SQLcommand)
 
