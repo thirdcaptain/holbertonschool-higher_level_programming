@@ -29,5 +29,5 @@ if __name__ == "__main__":
     for obj in list:
         for char in obj.name:
             if char == 'a':
-                obj.delete()
+                session.delete(obj)
             session.commit()
