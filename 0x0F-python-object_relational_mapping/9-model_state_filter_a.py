@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""module lists all State objects with 'a' from database hbtn_0e_6_usa using SQLAlchemy
+""" module lists all State objects with 'a' from database using SQLAlchemy
 """
 
 from sys import argv
