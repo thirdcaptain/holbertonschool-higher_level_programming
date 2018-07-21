@@ -24,7 +24,7 @@ if __name__ == "__main__":
     DBSession = sessionmaker(bind=engine)
     session = DBSession()
 
-    list = session.query(State).all()
+    list = session.query(State).order_by(State.id).all()
     if not list:
         print("Nothing")
     else:
