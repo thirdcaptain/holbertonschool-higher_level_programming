@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""module adds updates name of state in database using SQLAlchemy
+"""module updates name of state in database using SQLAlchemy
 """
 
 from sys import argv
