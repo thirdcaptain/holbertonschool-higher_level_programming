@@ -31,4 +31,4 @@ if __name__ == "__main__":
             if char == 'a':
                 session.delete(obj)
                 break
-            session.commit()
+    session.commit()
