@@ -30,4 +30,5 @@ if __name__ == "__main__":
         for char in obj.name:
             if char == 'a':
                 session.delete(obj)
+                break
             session.commit()
