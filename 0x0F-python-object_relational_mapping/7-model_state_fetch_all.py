@@ -6,7 +6,6 @@ from sys import argv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
-from sqlalchemy import inspect
 
 if __name__ == "__main__":
     username = argv[1]
@@ -25,8 +24,5 @@ if __name__ == "__main__":
     session = DBSession()
 
     list = session.query(State).order_by(State.id).all()
-    if not list:
-        print("Nothing")
-    else:
-        for elem in list:
-            print("{}: {}".format(elem.id, elem.name))
+    for elem in list:
+        print("{}: {}".format(elem.id, elem.name))
