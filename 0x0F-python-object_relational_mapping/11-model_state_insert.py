@@ -25,14 +25,14 @@ if __name__ == "__main__":
     DBSession = sessionmaker(bind=engine)
     session = DBSession()
 
-    new_state = State(name="Louisana")
+    new_state = State(name="Louisiana")
     session.add(new_state)
     session.commit()
 
     list = session.query(State).order_by(State.id).all()
     found_flag = 0
     for obj in list:
-        if obj.name == 'Louisana':
+        if obj.name == 'Louisiana':
             print("{}".format(obj.id))
             found_flag = 1
     if found_flag == 0:
