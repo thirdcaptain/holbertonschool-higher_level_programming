@@ -27,7 +27,7 @@ if __name__ == "__main__":
     session = DBSession()
 
     list = session.query(State).order_by(State.id).all()
-    found_flag = 0;
+    found_flag = 0
     for obj in list:
         if obj.name == state_obj:
             print("{}".format(obj.id))
