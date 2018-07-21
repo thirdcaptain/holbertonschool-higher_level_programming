@@ -35,7 +35,6 @@ if __name__ == "__main__":
     """
 
     first = session.query(State).first()
-    print(first)
     if first is None:
         print("Nothing")
     else:
