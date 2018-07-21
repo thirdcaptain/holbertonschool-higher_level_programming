@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""module lists all State objects from database hbtn_0e_6_usa using SQLAlchemy
+"""module lists first state object from database hbtn_0e_6_usa using SQLAlchemy
 """
 
 from sys import argv
