@@ -7,29 +7,12 @@ def find_peak(list_of_integers):
     if list_of_integers:
         # half = len(list_of_integers) // 2
         length = len(list_of_integers)
-        for num in range(len(list_of_integers)):
-            peak = list_of_integers[num]
+        peak = list_of_integers[0]
+        for num in list_of_integers:
             if length == 1:
                 return peak
-            if num == 0 and length == 2:
-                if peak > list_of_integers[num + 1]:
-                    return peak
-                elif peak < list_of_integers[num + 1]:
-                    return list_of_integers[num + 1]
-                elif peak == list_of_integers[num + 1]:
-                    return peak
-            if num == 0 and length > 1:
-                if list_of_integers[num + 1] < peak:
-                    return peak
-            elif num != length and length > 2:
-                if (list_of_integers[num - 1] < peak and
-                        list_of_integers[num + 1] < peak):
-                    return peak
-                if (list_of_integers[num - 1] == peak and
-                        list_of_integers[num + 1] == peak):
-                    return peak
-            elif num == length:
-                if (list_of_integers[num - 1] < peak):
-                    return peak
+            if num > peak:
+                peak = num
+        return peak
     else:
         return None
