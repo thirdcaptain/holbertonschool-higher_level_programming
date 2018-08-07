@@ -8,6 +8,7 @@ if __name__ == "__main__":
     password = sys.argv[2]
     page = requests.get(url, auth=(user, password))
     page_json = page.json()
-    for key, value in page_json.items():
-        if key == 'id':
-            print(value)
+    try:
+        print(page_json['id'])
+    except Exception:
+        print("None")
