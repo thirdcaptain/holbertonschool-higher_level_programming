@@ -4,5 +4,5 @@ if __name__ == "__main__":
     import urllib.request
     import sys
     with urllib.request.urlopen(sys.argv[1]) as response:
-        html = response.read()
-    print(response.info().get_all('X-Request-Id')[0])
+        header_dict = dict(response.info())
+        print(header_dict['X-Request-Id'])
