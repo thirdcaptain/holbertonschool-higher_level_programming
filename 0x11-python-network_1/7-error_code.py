@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Requests a URL with a POST request and email parameter"""
+"""Requests a URL and handles error codes"""
 if __name__ == "__main__":
     import requests
     import sys
