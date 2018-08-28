@@ -69,4 +69,4 @@ A script that searches the second biggest integer in the list of arguments.
 A script that replaces the const value of myObject from 12 to 89
 
 ### 13-add.js
-a function that returns the addition of 2 integers, but function must be visible from outside
+A function that returns the addition of 2 integers, but function must be visible from outside
