@@ -1,2 +1,8 @@
-# holbertonschool-higher_level_programming
-Holberton School Higher Level Programming
+# Holberton School - Higher Level Programming Projects
+
+Projects related to:
+- Python scripts
+- Python Object-Oriented Programming
+- Python Networking Modules
+- API queries
+- Javascript
