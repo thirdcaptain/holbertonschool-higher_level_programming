@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// Rectangle class with constructor and print method
+// Square class
 
 const Rectangle = require('./4-rectangle');
 
