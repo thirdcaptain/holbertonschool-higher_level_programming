@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// Empty rectangle class
+// Rectangle class with qualified constructor
 class Rectangle {
   constructor (w, h) {
     if (w > 0 && h > 0) {

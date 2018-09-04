@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// Empty rectangle class
+// Rectangle class with constructor
 class Rectangle {
   constructor (w, h) {
     this.width = w;
