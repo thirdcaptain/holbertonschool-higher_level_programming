@@ -11,7 +11,7 @@ request(url, function (error, response, body) {
     let films = JSON.parse(body).results;
     for (let i = 0; i < films.length; i++) {
       for (let j = 0; j < films[i].characters.length; j++) {
-        if (films[i].characters[j] === 'https://swapi.co/api/people/18/') {
+        if (films[i].characters[j].search('/18/') > 0) {
           count++;
         }
       }
