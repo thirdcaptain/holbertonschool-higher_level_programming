@@ -1,1 +1,1 @@
-document.querySelector("header").style.backgroundColor = "red";
+document.querySelector("header").style.color= "red";
